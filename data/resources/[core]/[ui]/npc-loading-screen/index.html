@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="vue.min.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet">
+
+
+    <title>NPCore Character Selection</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="keepingColor">
+            <div id="background">
+                <img id="bak0" src="images/background1.jpg" style="top: -2%; opacity: 0" />
+                <img id="bak1" src="images/background2.jpg" style="top: -50%; opacity: 0" />
+                <img id="bak2" src="images/background3.jpg" style="top: 0; opacity: 0" />
+                <img id="bak3" src="images/background4.jpg" style="top: -23%; opacity: 0" />
+                <img id="bak4" src="images/background5.jpg" style="top: -20%; opacity: 0" />
+            </div>
+        </div>
+            
+        <div id="logo">
+
+            <div class="log-containter" v-if="showLog">
+                <div class="log-header"></div>
+                <div id="log" class="log">Error Initializing Log</div>
+                <div class="log-footer"></div>
+            </div>
+
+            <div id="debug" class="log log-top-right"></div>
+            <div class="loading-container">
+                <div class ="loading-labels">
+                    <div id="INIT_BEFORE_MAP_LOADED-label" class="color-first"></div>
+                    <div id="MAP-label" class="color-second"></div>
+                    <div id="INIT_AFTER_MAP_LOADED-label" class="color-third"></div>
+                    <div id="INIT_SESSION-label" class="color-fourth"></div>
+                </div>
+                <div class="loading-bar-container">
+                    <div id="INIT_BEFORE_MAP_LOADED-bar" class="loading-bar bgcolor-first"></div>
+                    <div id="MAP-bar" class="loading-bar bgcolor-second"></div>
+                    <div id="INIT_AFTER_MAP_LOADED-bar" class="loading-bar bgcolor-third"></div>
+                    <div id="INIT_SESSION-bar" class="loading-bar bgcolor-fourth"></div>
+                </div>
+            </div>
+
+            <!-- <div class="interaction-help-prompt">
+                <div class="interaction-text-help">
+                    <div class="new-help-key">G</div>
+                    <div class="new-help-info">Display Output</div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
